@@ -59,7 +59,7 @@ class Health: public Condition{
     void print_Health();
 };
 int main(){
-    cout<<"Enter 'Hi' to turn on Hero ."<<endl;
+    cout<<"Enter 'Hi' to turn on Bay_Max ."<<endl;
      string* run;
      run = new string;
     getline(cin,*run);
@@ -68,7 +68,7 @@ int main(){
      }else{
          delete run;
          run=nullptr;
-        cout<<"Hello my name is Hero . I have been created by the great Amrit Prakash"<<endl;
+        cout<<"Hello my name is Bay_Max . I have been created by the great Amrit Prakash"<<endl;
         cout<<"I am a nursing program"<<endl;
         Condition* C;
         C = new Condition ;
