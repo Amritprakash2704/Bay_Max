@@ -4,7 +4,7 @@
 #include<cmath>
 using namespace std;
 struct Personal_details{
-    string name;
+    string name;     
     int age;   
 };
 struct Body_Temperature{
@@ -16,7 +16,7 @@ struct BMI{
     string scaleh = "m";
     double weight = 80;
     string scalew = "kg";
-    double BMI = (weight/(height*height));
+    double BMI ;
     string scale ; 
 };
 struct Blood_Pressure{
@@ -178,10 +178,12 @@ void Health::know_Health(){
     cout<<"Enter your weight : (in kilograms)"<<endl;
     cin>>B.weight;
     B.scale = B.scalew;
+     B.BMI = (B.weight/(B.height*B.height));
     B.scale.append("(("); B.scale.append(B.scalew);B.scale.append(")^-2)");
 }
 void Health::print_Health(){
-      cout<<endl<<"BMI : "<<setw(3)<<endl;
+      cout<<"Current temperatures : ">>setw(3)<<endl;
+      cout<<endl<<"BMI : "<<setw(3)<<B.BMI<<endl;
       cout<<"Diastolic pressure : "<<setw(3)<<endl;
       cout<<"systolic pressure : "<<setw(3)<<endl;
       cout<<"Blood Sugar Level : "<<setw(3)<<endl;
