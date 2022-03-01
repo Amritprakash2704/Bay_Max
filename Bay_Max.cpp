@@ -52,7 +52,8 @@ class Health: public Condition{
     BMI B;
     Blood_Pressure P;
     Blood_Sugar_Level S;
-    Hormones H;   
+    Hormones H;  
+    friend void calculator(); 
 
     public :
     void know_Health();
@@ -160,17 +161,28 @@ void Condition::getdetails(){
      }
 }
 void Condition::spitdetails(){
-    cout<<"Coupon Number : "<<coupon_number<<endl;
+    cout<<endl<<"Coupon Number : "<<coupon_number<<endl;
     cout<<"Name : "<<p.name<<endl;
     cout<<"Age : "<<p.age<<endl;
     cout<<"Issue : "<<issue <<" | severity level : "<<severity<<endl;
 }
 void Health::know_Health(){
-    cout<<"Enter your height :"<<endl; 
-    
+     char *call;
+     call = new char;
+     cout<<"We are going to calculate your BMI "<<endl;
+     cout<<"Our standard units are (heiht : meters ; weight : kg) . Press 'K' to change units else press any key to continue ."<<endl;
+     cin>>call;
+     if (*call != 'K'){}else{void calculator();}
+    cout<<"Enter your height : (in meters)"<<endl; 
+    cin>>B.height;
+    cout<<"Enter your weight : (in kilograms)"<<endl;
+    cin>>B.weight;
     B.scale = B.scalew;
     B.scale.append("(("); B.scale.append(B.scalew);B.scale.append(")^-2)");
 }
 void Health::print_Health(){
-
+      cout<<endl<<"BMI : "<<setw(3)<<endl;
+      cout<<"Diastolic pressure : "<<setw(3)<<endl;
+      cout<<"systolic pressure : "<<setw(3)<<endl;
+      cout<<"Blood Sugar Level : "<<setw(3)<<endl;
 }
