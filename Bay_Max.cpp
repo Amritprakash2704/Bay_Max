@@ -182,7 +182,7 @@ void Health::know_Health(){
     B.scale.append("(("); B.scale.append(B.scalew);B.scale.append(")^-2)");
 }
 void Health::print_Health(){
-      cout<<"Current temperatures : ">>setw(3)<<endl;
+      cout<<"Current temperatures : "<<setw(3)<<endl;
       cout<<endl<<"BMI : "<<setw(3)<<B.BMI<<endl;
       cout<<"Diastolic pressure : "<<setw(3)<<endl;
       cout<<"systolic pressure : "<<setw(3)<<endl;
