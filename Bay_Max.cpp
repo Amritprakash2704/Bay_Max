@@ -184,7 +184,7 @@ void Health::know_Health(){
 void Health::print_Health(){
       cout<<"Current temperatures : "<<setw(3)<<endl;
       cout<<endl<<"BMI : "<<setw(3)<<B.BMI<<endl;
-      cout<<"Diastolic pressure : "<<setw(3)<<endl;
-      cout<<"systolic pressure : "<<setw(3)<<endl;
-      cout<<"Blood Sugar Level : "<<setw(3)<<endl;
+      cout<<"Diastolic pressure : "<<setw(3)<<P.diastolic<<" "<<P.scale<<endl;
+      cout<<"systolic pressure : "<<setw(3)<<P.systolic<<" "<<P.scale <<endl;
+      cout<<"Blood Sugar Level : "<<setw(3)<<S.measurement<<" "<<S.scale<<endl;
 }
